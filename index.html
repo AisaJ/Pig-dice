@@ -3,12 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>PIG DICE</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Kaushan+Script" rel="stylesheet">
   </head>
   <body>
-    <div class="container row">
-      <h1>  Roll Dice</h1>
+    <div class="container" id="header">
+      <div class="row">
+        <div class="card-header">
+          <h1>  Roll a Die</h1>
+          <p>
+            Who has the lucky charm?
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="entry-form">
+          <h2><strong>Players, enter your names here.</strong></h2>
+          <form action="index.html" method="post">
+            <div class="form-group form-inline">
+              <label for="player-1">1st Player:</label>
+              <input type="text" id="player-1" class="form-control" placeholder="Enter name">
+              <label for="player-2">2nd Player:</label>
+              <input type="text" id="player-2" class="form-control" placeholder="Enter name">
+            </div>
+
+          <button type="submit" class="btn btn-primary">OK</button>
+          </form>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-3">
+
+          </div>
+        </div>
 
     </div>
-
+    <script src="js/jquery-3.3.1.js"></script>
+    <script scr="js/scripts.js"></script>
   </body>
 </html>
