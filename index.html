@@ -23,7 +23,7 @@
           <form action="index.html" method="post">
             <div class="form-group form-inline">
               <label for="player-1">1st Player:</label>
-              <input type="text" id="player-1" class="form-control" placeholder="Enter name">
+              <input type="text" id="player-1" class="form-control" placeholder="Enter name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label for="player-2">2nd Player:</label>
               <input type="text" id="player-2" class="form-control" placeholder="Enter name">
             </div>
@@ -34,13 +34,35 @@
       </div>
 
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 card-body" id="player-1-side">
+            <div id="profile1">
+              <span id="player1-Name"></span>
+              <p>
+                Cumulative points:
+              </p>
+            </div>
+            <p>
+              Your Score:
+            </p>
+
+            <button type="submit" class="btn btn-outline-primary" id="button1">Roll-away</button>
 
           </div>
           <div class="col-md-3">
 
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 card-body" id="player-2-side">
+            <div id="profile2">
+              <span id="player2-Name"></span>
+              <p>
+                Cumulative points:
+              </p>
+            </div>
+            <p>
+              Your Score:
+            </p>
+
+            <button type="submit" class="btn btn-outline-primary" id="button2">Roll-away</button>
 
           </div>
         </div>
