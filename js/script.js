@@ -1,12 +1,11 @@
 
 $(document).ready(function(){
   //Business logic
-
-
+  
 
   //User Interface logic
   $("form#user-name").submit(function(event){
-    alert("working!");
+    console.log("working!");
     var name1 = $("#player-1").val();
     var name2 = $("#player-2").val();
 
@@ -16,18 +15,15 @@ $(document).ready(function(){
     event.preventDefault();
   });
   $("#roll1").click(function(){
-      alert('work!');
-      var diceRoll = Math.ceil(Math.random()*6);
+      var diceRoll1 = Math.ceil(Math.random()*6);
 
-      document.getElementById('currentScore1').innerHTML=diceRoll;
+      document.getElementById('currentScore1').innerHTML=diceRoll1;
 
   });
+  $("#roll2").click(function(){
+    var diceRoll2 = Math.ceil(Math.random()*6);
 
-
-  /*$(".scroll").submit(function(event){
-
-
-    event.preventDefault();
-  });*/
+    document.getElementById('currentScore2').innerHTML=diceRoll2;
+  });
 
 });
