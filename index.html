@@ -13,18 +13,20 @@
         <div class="card-header">
           <h1>  Roll a Die</h1>
           <p>
-            Who has the lucky charm?
+            See who has the lucky charm?
           </p>
         </div>
       </div>
       <div class="row">
         <div class="entry-form">
           <h2><strong>Players, enter your names here.</strong></h2>
-          <form action="index.html" method="post">
+          <form id="user-name">
             <div class="form-group form-inline">
-              <label for="player-1">1st Player:</label>
-              <input type="text" id="player-1" class="form-control" placeholder="Enter name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <label for="player-2">2nd Player:</label>
+              <label for="player-1">1st Player: &nbsp;</label>
+              <input type="text" id="player-1" class="form-control" placeholder="Enter name">
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="form-group form-inline">
+              <label for="player-2">2nd Player: &nbsp;</label>
               <input type="text" id="player-2" class="form-control" placeholder="Enter name">
             </div>
 
@@ -36,16 +38,16 @@
         <div class="row">
           <div class="col-md-3 card-body" id="player-1-side">
             <div id="profile1">
-              <span id="player1-Name"></span>
+              <h2><span class="player1-Name"></span></h2>
               <p>
                 Cumulative points:
               </p>
             </div>
             <p>
-              Your Score:
+              Your Score: <span id="currentScore1"></span>
             </p>
 
-            <button type="submit" class="btn btn-outline-primary" id="button1">Roll-away</button>
+            <button type="button" class="btn btn-outline-primary" id="roll1">Roll</button>
 
           </div>
           <div class="col-md-3">
@@ -53,16 +55,16 @@
           </div>
           <div class="col-md-3 card-body" id="player-2-side">
             <div id="profile2">
-              <span id="player2-Name"></span>
+              <h2><span class="player2-Name"></span></h2>
               <p>
                 Cumulative points:
               </p>
             </div>
             <p>
-              Your Score:
+              Your Score: <span id="currentScore2"></span>
             </p>
 
-            <button type="submit" class="btn btn-outline-primary" id="button2">Roll-away</button>
+            <button type="button" class="btn btn-outline-primary" onclick="rolling()">Roll</button>
 
           </div>
         </div>
