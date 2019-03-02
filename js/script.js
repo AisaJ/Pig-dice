@@ -1,7 +1,11 @@
+//Business logic
+function Player (name){
+  this.playersName = name;
+  this.currentScore = 0;
+  this.totalScore = 0;
+}
 
 $(document).ready(function(){
-  //Business logic
-  
 
   //User Interface logic
   $("form#user-name").submit(function(event){
@@ -9,15 +13,25 @@ $(document).ready(function(){
     var name1 = $("#player-1").val();
     var name2 = $("#player-2").val();
 
-    $(".player1-Name").text(name1);
-    $(".player2-Name").text(name2);
+    var diffPlayer = new Player(name1);
+    var diffPlayer2 = new Player(name2);
+
+    $(".player1-Name").text(diffPlayer.playersName);
+    $(".player2-Name").text(diffPlayer2.playersName);
 
     event.preventDefault();
   });
   $("#roll1").click(function(){
       var diceRoll1 = Math.ceil(Math.random()*6);
-
       document.getElementById('currentScore1').innerHTML=diceRoll1;
+
+      var scores = [];
+      scores.push(new Player(diceRoll1));
+      var newScore = scores;
+      for (var i = 0; i < scores.length; i++) {
+        newScore = newScore + scores[i]
+      }
+      document.getElementById('currnetTotal1').innerHTML=this.currentScore;
 
   });
   $("#roll2").click(function(){
