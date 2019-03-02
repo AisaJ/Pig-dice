@@ -27,11 +27,12 @@ $(document).ready(function(){
 
       var scores = [];
       scores.push(new Player(diceRoll1));
-      var newScore = scores;
-      for (var i = 0; i < scores.length; i++) {
-        newScore = newScore + scores[i]
-      }
-      document.getElementById('currnetTotal1').innerHTML=this.currentScore;
+      var newScore = scores.forEach(function(score){
+        for (var i = 0; i < scores.length; i++) {
+          return score += score;
+        }
+      });
+    $("#currentTotal1").text(newScore.this.currentScore);
 
   });
   $("#roll2").click(function(){
