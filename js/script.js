@@ -4,6 +4,9 @@ function Player (name){
   this.currentScore = 0;
   this.totalScore = 0;
 }
+Player.prototype.totalScore = function(){
+  return this.currentScore+=this.currentScore;
+}
 
 $(document).ready(function(){
 
@@ -29,10 +32,14 @@ $(document).ready(function(){
       scores.push(new Player(diceRoll1));
       var newScore = scores.forEach(function(score){
         for (var i = 0; i < scores.length; i++) {
-          return score += score;
+          if (scores[i]===1){
+            return 0;
+          }else {
+            return score += score;
+          }
         }
       });
-    $("#currentTotal1").text(newScore.this.currentScore);
+    $("#currentTotal1").text(newScore.currentScore);
 
   });
   $("#roll2").click(function(){
