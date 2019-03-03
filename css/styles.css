@@ -4,3 +4,6 @@
 .card-header{
   width: 100%;
 }
+#diceOne{
+  display: none;
+}

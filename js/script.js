@@ -1,16 +1,17 @@
 //Business logic
 function Player (name){
   this.playersName = name;
-  this.totalScore = 0;
+  this.overallScore = [];
 
 }
 Player.prototype.currentScore = function(){
-  this.currentScore = 0;
+  for (this.overallScore= 0; i < array.length; i++) {
+    array[i]
+  }
 }
 
+//User Interface logic
 $(document).ready(function(){
-
-  //User Interface logic
   $("form#user-name").submit(function(event){
     console.log("working!");
     var name1 = $("#player-1").val();
@@ -25,32 +26,28 @@ $(document).ready(function(){
     event.preventDefault();
   });
   var currentScore1 = 0;
+  var overallPoints1 = [];
+  var overallScore1 = 0;
   $("#roll1").click(function(){
       var diceRoll1 = Math.ceil(Math.random()*6);
       document.getElementById('currentScore1').innerHTML=diceRoll1;
 
-      /*var scores = [];
-      scores.push(diceRoll1);
-      var newScore = 0;
-        for (var i = 0; i < scores.length; i++) {
-          if (diceRoll1!==1){
-            newScore+=scores[i];
-          }else {
-            newScore = 0;
-          }
-        };*/
-
-        if (diceRoll1 !==1){
-           currentScore1+=diceRoll1;
-         }else {
-           currentScore1=0;
-           alert("Bummer! You Lost!");
+      if (diceRoll1 !==1){
+          currentScore1+=diceRoll1;
+      }else {
+         currentScore1=0;
+         alert("Bummer! You Lost!");
+          $("#roll1").hide();
+          $("#roll2").show();
+          $("#diceOne").fadeIn(1500);
          };
 
-         $("#currentTotal1").text(currentScore1);
+        $("#currentTotal1").text(currentScore1);
   });
 
   var currentScore2=0;
+  var overallPoints2 = [];
+  var overallScore2 = 0;
   $("#roll2").click(function(){
     var diceRoll2 = Math.ceil(Math.random()*6);
 
@@ -61,8 +58,22 @@ $(document).ready(function(){
      }else {
        currentScore2=0;
        alert("Bummer! You Lost!");
+       $("#roll2").hide();
+       $("#roll1").show();
+       $("#diceOne").fadeIn(1500);
      };
      $("#currentTotal2").text(currentScore2);
+  });
+
+  $("#pause1").click(function(){
+    document.getElementById('roll1').disabled = true;
+    document.getElementById('roll2').disabled = false;
+
+    overallPoints1.push(currentScore1);
+  });
+  $("#pause2").click(function(){
+    document.getElementById('roll1').disabled = false;
+    document.getElementById('roll2').disabled = true;
   });
 
 });
