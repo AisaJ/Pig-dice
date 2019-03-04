@@ -1,11 +1,10 @@
 //Business logic
 function Player (name){
   this.playersName = name;
-
 };
-Player.prototype.oScore = function(){
+/*Player.prototype.oScore = function(){
   return this.overallScore + " Points"
-};
+};*/
 function toGame(){
   window.scrollTo(0,1500);
 }
@@ -13,24 +12,16 @@ function newGame(){
   location.reload();
   window.scrollTo(0,-1000);
 };
-//user can close the winner's pop-up display y clicking the x sign
-function closeModal(){
-  modal.style.display = "none";
-}
-window.onclick = function(event){
-  if(event.target == modal){
-    modal.style.display = "none";
-  }
-}
+
 //User Interface logic
 $(document).ready(function(){
   $("form#user-name").submit(function(event){
     console.log("working!");
-    var name1 = $("#player-1").val();
-    var name2 = $("#player-2").val();
+    name1 = $("#player-1").val();
+    name2 = $("#player-2").val();
 
-    var diffPlayer = new Player(name1);
-    var diffPlayer2 = new Player(name2);
+    diffPlayer = new Player(name1);
+    diffPlayer2 = new Player(name2);
 
     $(".player1-Name").text(diffPlayer.playersName);
     $(".player2-Name").text(diffPlayer2.playersName);
@@ -57,9 +48,11 @@ $(document).ready(function(){
       };
       $("#currentTotal1").text(currentScore1);
       if(overallScore1+currentScore1>=10){
-        $("#winners-box").show();
-        $("#win-msg").text("Game Over! "+diffPlayer2.playersName+ " wins, Yaaay!!! Points reached 100.");
         alert("I love js");
+        $("#roll1").hide();
+        $("#roll2").hide();
+        $('#win-msg').text("Game Over!"+diffPlayer.playersName+" wins, Yaaay!!! Points reached 100.");
+        $("#win-msg").show();
       };
   });
 
@@ -83,9 +76,10 @@ $(document).ready(function(){
      };
      $("#currentTotal2").text(currentScore2);
      if(overallScore2+currentScore2>=100){
-       $("#winners-box").show();
-       $("#win-msg").text("Game Over! "+diffPlayer.playersName+ " wins, Yaaay!!! Points reached 100.");
-       alert("I love js");
+       $("#roll1").hide();
+       $("#roll2").hide();
+       $('#win-msg').text("Game Over!"+diffPlayer2.playersName+" wins, Yaaay!!! Points reached 100.");
+       $("#win-msg").show();
      };
   });
 
