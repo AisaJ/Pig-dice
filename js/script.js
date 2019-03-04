@@ -6,11 +6,11 @@ function Player (name){
   return this.overallScore + " Points"
 };*/
 function toGame(){
-  window.scrollTo(0,1500);
+  window.scrollTo(0,500);
 };
 function newGame(){
   location.reload();
-  window.scrollTo(0,-1000);
+  window.scrollTo(0,-500);
 };
 
 //User Interface logic
