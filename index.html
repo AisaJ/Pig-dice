@@ -62,8 +62,9 @@
           </div>
           <div class="col-md-4">
             <button type="button" class="btn btn-primary" id="pause1">Player1 Pause</button><br>
-            <button type="button" class="btn btn-primary" id="pause2">Player2 Pause</button>
+            <button type="button" class="btn btn-primary" id="pause2">Player2 Pause</button><br>
             <h3 id="diceOne">Bummer! You lost, time for your opponent to play.</h3>
+            <button onclick="newGame()" id="refresh" class="btn btn-primary"><strong>New Game</strong></button>
 
           </div>
           <div class="col-md-4 card-body" id="player-2-side">
@@ -84,7 +85,15 @@
 
           </div>
         </div>
-
+        <!--Winner's Modal content box-->
+        <div id="winners-box" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>
+              <span id="win-msg"></span>
+            </p>
+          </div>
+        </div>
     </div>
 
   </body>

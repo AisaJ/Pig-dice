@@ -2,11 +2,23 @@
 function Player (name){
   this.playersName = name;
   this.overallScore = 0;
-}
+};
 Player.prototype.oScore = function(){
   return this.overallScore + " Points"
+};
+function newGame(){
+  location.reload();
+  window.scrollTo(1000,0);
+};
+//user can close the winner's pop-up display y clicking the x sign
+function closeModal(){
+  modal.style.display = "none";
 }
-
+window.onclick = function(event){
+  if(event.target == modal){
+    modal.style.display = "none";
+  }
+}
 //User Interface logic
 $(document).ready(function(){
   $("form#user-name").submit(function(event){
