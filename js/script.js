@@ -7,7 +7,7 @@ function Player (name){
 };*/
 function toGame(){
   window.scrollTo(0,1500);
-}
+};
 function newGame(){
   location.reload();
   window.scrollTo(0,-1000);
