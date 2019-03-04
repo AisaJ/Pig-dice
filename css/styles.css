@@ -58,3 +58,12 @@ div.form-entry{
   display: none;
   padding-top: 3rem;
 }
+#gRules{
+  float: right;
+}
+#rules h2{
+  text-decoration: underline;
+}
+#rules{
+  font-size: 1.3rem;
+}
