@@ -34,10 +34,10 @@ $(document).ready(function(){
       }else {
          currentScore1=0;
          //User Interface logic
-         alert("Bummer! You Lost!");
           $("#roll1").hide();
           $("#roll2").show();
           $("#diceOne").fadeIn(1500);
+          $("#diceOne").fadeOut(3500);
           document.getElementById('roll2').disabled = false;
       };
       $("#currentTotal1").text(currentScore1);
@@ -55,10 +55,10 @@ $(document).ready(function(){
      }else {
        currentScore2=0;
        //User Interface logic
-       alert("Bummer! You Lost!");
        $("#roll2").hide();
        $("#roll1").show();
        $("#diceOne").fadeIn(1500);
+       $("#diceOne").fadeOut(3500);
        document.getElementById('roll1').disabled = false;
      };
      $("#currentTotal2").text(currentScore2);
@@ -83,8 +83,8 @@ $(document).ready(function(){
     $("#roll1").show();
     overallScore2+=currentScore2;
     currentScore2=0;
-    document.getElementById('tScore1').innerHTML=currentScore1;
-    document.getElementById('tScore1').innerHTML=overallScore1;
+    document.getElementById('tScore2').innerHTML=currentScore2;
+    document.getElementById('tScore2').innerHTML=overallScore2;
 
     if(overallScore1>=100){
       alert("I love js");

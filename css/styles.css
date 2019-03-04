@@ -1,9 +1,46 @@
 .container{
   font-family: 'Courgette', cursive;
+  /*font-family: 'Kaushan',cursive;*/
+  background-color: #ffdead;
+  font-size: 2rem;
 }
 .card-header{
   width: 100%;
+  text-align: center;
 }
 #diceOne{
   display: none;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3rem;
+}
+.entry-form{
+  margin: 1rem 7rem 1rem 4rem;
+}
+.player1-Name, .player2-Name{
+  color: rgb(97,160,255);
+}
+.btn-primary{
+  background-color: rgb(97,160,255);
+  color: #ffdead;
+  border-color: rgb(97,160,255);
+}
+.btn-outline-primary{
+  color: rgb(97,160,255);
+  border-color: rgb(97,160,255);
+}
+.btn-outline-primary:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: rgb(97,160,255);
+}
+div.form-entry{
+  float: left;
+}
+.profile-p{
+  width: 8rem;
+}
+#pause1,#pause2{
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }

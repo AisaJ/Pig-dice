@@ -37,12 +37,17 @@
           <button type="submit" class="btn btn-primary">OK</button>
           </form>
         </div>
+        <img class="img-fluid" src="images/dices.gif" alt="Dice" width="450">
       </div>
 
         <div class="row">
-          <div class="col-md-3 card-body" id="player-1-side">
+          <div class="col-md-4 card-body" id="player-1-side">
             <div id="profile1">
-              <h2><span class="player1-Name"></span> &nbsp;&nbsp;Overall Score: <span id="tScore1"></span></h2>
+              <h1><span class="player1-Name"></span></h1>
+              <img class="img-fluid profile-p" src="images/Profile-icon.png" alt="Profile avatar">
+              <p>
+                <strong>Overall Score: <span id="tScore1"></span></strong>
+              </p>
               <p>
                 Cumulative points:<span id="currentTotal1"></span>
               </p>
@@ -55,15 +60,19 @@
             <button type="button" class="btn btn-outline-primary" id="roll1">Roll</button>
 
           </div>
-          <div class="col-md-3">
-            <h3 id="diceOne">You lost! Time for your opponent to play!</h3>
+          <div class="col-md-4">
             <button type="button" class="btn btn-primary" id="pause1">Player1 Pause</button><br>
             <button type="button" class="btn btn-primary" id="pause2">Player2 Pause</button>
+            <h3 id="diceOne">Bummer! You lost, time for your opponent to play.</h3>
 
           </div>
-          <div class="col-md-3 card-body" id="player-2-side">
+          <div class="col-md-4 card-body" id="player-2-side">
             <div id="profile2">
-              <h2><span class="player2-Name"></span>&nbsp;&nbsp;Overall Score: <span id="tScore2"></span></h2>
+              <h1><span class="player2-Name"></span></h1>
+              <img class="img-fluid profile-p" src="images/profile2.png" alt="Profile avatar">
+              <p>
+                <strong>Overall Score: <span id="tScore2"></span></strong>
+              </p>
               <p>
                 Cumulative points:<span id="currentTotal2"></span>
               </p>
@@ -71,7 +80,6 @@
             <p>
               You rolled: <span id="currentScore2"></span>
             </p>
-
             <button type="button" class="btn btn-outline-primary" id="roll2">Roll</button>
 
           </div>
