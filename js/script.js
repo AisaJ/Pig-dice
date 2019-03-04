@@ -47,11 +47,11 @@ $(document).ready(function(){
           document.getElementById('roll2').disabled = false;
       };
       $("#currentTotal1").text(currentScore1);
-      if(overallScore1+currentScore1>=10){
+      if(overallScore1+currentScore1>=100){
         alert("I love js");
         $("#roll1").hide();
         $("#roll2").hide();
-        $('#win-msg').text("Game Over!"+diffPlayer.playersName+" wins, Yaaay!!! Points reached 100.");
+        $('#win-msg').text("Game Over! "+diffPlayer.playersName+" wins, points reached 100. Yaaay!!!");
         $("#win-msg").show();
       };
   });
@@ -78,7 +78,7 @@ $(document).ready(function(){
      if(overallScore2+currentScore2>=100){
        $("#roll1").hide();
        $("#roll2").hide();
-       $('#win-msg').text("Game Over!"+diffPlayer2.playersName+" wins, Yaaay!!! Points reached 100.");
+       $('#win-msg').text("Game Over!"+diffPlayer2.playersName+" wins, points reached 100. Yaaay!!! ");
        $("#win-msg").show();
      };
   });
