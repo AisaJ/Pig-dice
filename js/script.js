@@ -48,7 +48,6 @@ $(document).ready(function(){
       };
       $("#currentTotal1").text(currentScore1);
       if(overallScore1+currentScore1>=100){
-        alert("I love js");
         $("#roll1").hide();
         $("#roll2").hide();
         $('#win-msg').text("Game Over! "+diffPlayer.playersName+" wins, points reached 100. Yaaay!!!");
@@ -101,10 +100,7 @@ $(document).ready(function(){
     currentScore2=0;
     document.getElementById('tScore2').innerHTML=currentScore2;
     document.getElementById('tScore2').innerHTML=overallScore2;
-
-    if(overallScore1>=10){
-      alert("I love js");
-    };
+    
   });
 
 });
