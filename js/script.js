@@ -1,7 +1,7 @@
 //Business logic
 function Player (name){
   this.playersName = name;
-  this.overallScore = 0;
+
 };
 Player.prototype.oScore = function(){
   return this.overallScore + " Points"
@@ -53,6 +53,9 @@ $(document).ready(function(){
           document.getElementById('roll2').disabled = false;
       };
       $("#currentTotal1").text(currentScore1);
+      if(overallScore1+currentScore1>=100){
+        alert("I love js");
+      };
   });
 
   var currentScore2=0;
@@ -74,6 +77,9 @@ $(document).ready(function(){
        document.getElementById('roll1').disabled = false;
      };
      $("#currentTotal2").text(currentScore2);
+     if(overallScore2+currentScore2>=100){
+       alert("I love js");
+     };
   });
 
   $("#pause1").click(function(){
@@ -85,9 +91,6 @@ $(document).ready(function(){
     document.getElementById('tScore1').innerHTML=currentScore1;
     document.getElementById('tScore1').innerHTML=overallScore1;
 
-    if(overallScore1>=100){
-      alert("I love js");
-    };
   });
   $("#pause2").click(function(){
     document.getElementById('roll1').disabled = false;

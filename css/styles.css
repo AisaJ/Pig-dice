@@ -8,6 +8,11 @@
   width: 100%;
   text-align: center;
 }
+#title{
+  font-family: 'Kaushan',cursive;
+  color: rgb(97,160,255);
+  font-weight: bold;
+}
 #diceOne{
   display: none;
   font-weight: bold;
