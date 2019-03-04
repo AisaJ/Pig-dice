@@ -6,9 +6,12 @@ function Player (name){
 Player.prototype.oScore = function(){
   return this.overallScore + " Points"
 };
+function toGame(){
+  window.scrollTo(0,1500);
+}
 function newGame(){
   location.reload();
-  window.scrollTo(1000,0);
+  window.scrollTo(0,-1000);
 };
 //user can close the winner's pop-up display y clicking the x sign
 function closeModal(){
@@ -53,7 +56,9 @@ $(document).ready(function(){
           document.getElementById('roll2').disabled = false;
       };
       $("#currentTotal1").text(currentScore1);
-      if(overallScore1+currentScore1>=100){
+      if(overallScore1+currentScore1>=10){
+        $("#winners-box").show();
+        $("#win-msg").text("Game Over! "+diffPlayer2.playersName+ " wins, Yaaay!!! Points reached 100.");
         alert("I love js");
       };
   });
@@ -78,6 +83,8 @@ $(document).ready(function(){
      };
      $("#currentTotal2").text(currentScore2);
      if(overallScore2+currentScore2>=100){
+       $("#winners-box").show();
+       $("#win-msg").text("Game Over! "+diffPlayer.playersName+ " wins, Yaaay!!! Points reached 100.");
        alert("I love js");
      };
   });
@@ -101,7 +108,7 @@ $(document).ready(function(){
     document.getElementById('tScore2').innerHTML=currentScore2;
     document.getElementById('tScore2').innerHTML=overallScore2;
 
-    if(overallScore1>=100){
+    if(overallScore1>=10){
       alert("I love js");
     };
   });

@@ -54,3 +54,6 @@ div.form-entry{
   display: block;
   font-size: 1.5rem;
 }
+#winners-box{
+  display: none;
+}
